@@ -1,0 +1,27 @@
+<!-- Таблица-оценка · СВЕТЛАЯ · легенда-шкала + плотная таблица с пилюлями-уровнями -->
+<section class="page light">
+  <div class="pad">
+    <div class="kicker" style="color:var(--burgundy);">ОЦЕНКА</div>
+    <h2 style="font-size:24pt;margin:6px 0 14px;">{{ Заголовок с <em>акцентом</em> }}</h2>
+    <div style="display:flex;gap:8px;margin-bottom:14px;">
+      <span class="lvl easy">Просто</span><span class="lvl mid">Средне</span>
+      <span class="lvl hard">Сложно</span><span class="lvl veryhard">Очень сложно</span>
+    </div>
+    <table style="width:100%;border-collapse:collapse;font-size:10pt;">
+      <thead>
+        <tr style="text-align:left;color:var(--ink-soft);border-bottom:2px solid var(--line);">
+          <th style="padding:6px;">{{ Колонка }}</th><th style="padding:6px;">{{ Колонка }}</th>
+          <th style="padding:6px;">Уровень</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- строки; при переполнении — перенос на новую страницу (поток), кегль ≥10pt НЕ мельчить (design-system.md → «Шкала кеглей») -->
+        <tr style="border-bottom:1px solid var(--line);">
+          <td style="padding:6px;">{{ … }}</td><td style="padding:6px;">{{ … }}</td>
+          <td style="padding:6px;"><span class="lvl mid">Средне</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="footer"><span>{{ РАЗДЕЛ }} <span class="sep">•</span> ОЦЕНКА</span><span>03</span></div>
+</section>

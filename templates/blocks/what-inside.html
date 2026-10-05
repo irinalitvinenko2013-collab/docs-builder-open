@@ -1,0 +1,23 @@
+<!-- Что внутри = ОГЛАВЛЕНИЕ · СВЕТЛАЯ. Каждый пункт — КЛИКАБЕЛЬНЫЙ якорь на свой раздел.
+     ВАЖНО: href="#sec-xxx" должен совпадать с id соответствующей <section id="sec-xxx" ...>.
+     Chromium при печати превращает их во внутренние переходы PDF. CSS .toc/.toc-go — в skeleton. -->
+<section class="page light">
+  <div class="pad">
+    <div class="kicker" style="color:var(--burgundy);">ЧТО ВНУТРИ</div>
+    <h2 style="font-size:26pt;margin:6px 0 14px;">{{ Заголовок с <em>акцентом</em> }}</h2>
+    <p style="font-size:9.5pt;color:var(--ink-soft);margin:0 0 18px;">Содержание — нажмите на тему, чтобы перейти к разделу.</p>
+
+    <div style="display:flex;flex-direction:column;gap:17px;">
+      <a href="#sec-1" class="toc" style="border-left:4px solid var(--burgundy);">
+        <svg class="ic" style="color:var(--burgundy);width:26px;height:26px;flex:none;"><use href="#growth"/></svg>
+        <div style="flex:1;">
+          <div class="num" style="font-size:10pt;color:var(--burgundy);font-family:var(--font-heading);font-weight:800;">01 · {{ ТЕМА }}</div>
+          <p style="font-size:10.5pt;color:var(--ink-soft);margin-top:4px;line-height:1.5;">{{ описание }}</p>
+        </div>
+        <span class="toc-go">›</span>
+      </a>
+      <!-- повтор пункта ×N: сменить href="#sec-N", иконку, номер, текст -->
+    </div>
+  </div>
+  <div class="footer"><span>{{ РАЗДЕЛ }} <span class="sep">•</span> ЧТО ВНУТРИ</span><span>02</span></div>
+</section>

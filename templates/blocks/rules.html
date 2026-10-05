@@ -1,0 +1,24 @@
+<!-- Правила / чек-лист · СВЕТЛАЯ · нумерованные карточки 2 колонки, последняя на всю ширину -->
+<section class="page light">
+  <div class="pad">
+    <div class="kicker" style="color:var(--burgundy);">ПРАВИЛА</div>
+    <h2 style="font-size:24pt;margin:6px 0 18px;">{{ Заголовок с <em>акцентом</em> }}</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+      <div style="background:var(--card);border-radius:10px;padding:14px 16px;display:flex;gap:12px;">
+        <div class="num" style="font-size:16pt;color:var(--burgundy);">1</div>
+        <p style="font-size:10.5pt;color:var(--ink-soft);">{{ правило }}</p>
+      </div>
+      <div style="background:var(--card);border-radius:10px;padding:14px 16px;display:flex;gap:12px;">
+        <div class="num" style="font-size:16pt;color:var(--burgundy);">2</div>
+        <p style="font-size:10.5pt;color:var(--ink-soft);">{{ правило }}</p>
+      </div>
+      <!-- последняя карточка — на всю ширину -->
+      <div style="grid-column:1 / -1;background:var(--card-warm);border-left:3px solid var(--gold);
+                  border-radius:10px;padding:14px 16px;display:flex;gap:12px;">
+        <div class="num" style="font-size:16pt;color:var(--burgundy);">N</div>
+        <p style="font-size:10.5pt;color:var(--ink);">{{ ключевое правило }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>{{ РАЗДЕЛ }} <span class="sep">•</span> ПРАВИЛА</span><span>06</span></div>
+</section>

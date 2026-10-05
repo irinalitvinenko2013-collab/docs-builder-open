@@ -1,0 +1,19 @@
+# Настройки Codex для этой системы. Собрано scripts/sync_agents.py — правьте роли,
+# а не этот файл.
+
+[agents]
+enabled = true
+max_concurrent_threads_per_session = 3
+max_depth = 1
+
+[agents.auditor]
+description = "Use after the PDF is rendered, as a FRESH pair of eyes — never the agent that did the typesetting. Checks the finished document twice: visually (page screenshots) and textually (facts against the source, spelling, tone). Returns a defect list with page numbers, or a clean verdict. Fixes nothing itself."
+config_file = "./agents/auditor.toml"
+
+[agents.pdf_builder]
+description = "Use to typeset and render the final PDF. Reads ingest/normalized.md plus the page plan from the orchestrator, opens the document-design skill, assembles guide.html from block templates in the active profile's colors, renders to output/, then runs self-QA (link count, 30/70 balance, overflow → re-render up to 3x). Returns metrics only."
+config_file = "./agents/pdf-builder.toml"
+
+[agents.source_extractor]
+description = "Use when the source is a URL, a third-party PDF, an audio/video recording or a screencast. Fetches/parses/transcribes the source, cleans it up and writes ingest/normalized-<slug>.md. Returns ONLY a short summary (sections, words, links) — never the raw content."
+config_file = "./agents/source-extractor.toml"

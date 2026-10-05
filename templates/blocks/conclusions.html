@@ -1,0 +1,25 @@
+<!-- Выводы / Топ · СВЕТЛАЯ · 2 колонки «плохо / хорошо» + врезка-note золотым -->
+<section class="page light">
+  <div class="pad">
+    <div class="kicker" style="color:var(--burgundy);">ВЫВОДЫ</div>
+    <h2 style="font-size:24pt;margin:6px 0 18px;">{{ Заголовок с <em>акцентом</em> }}</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+      <div style="background:var(--card);border-radius:10px;padding:16px 18px;border-top:3px solid var(--red-mid);">
+        <h3 style="font-size:13pt;color:var(--red-mid);margin-bottom:8px;">Чего избегать</h3>
+        <ul style="font-size:10.5pt;color:var(--ink-soft);padding-left:18px;line-height:1.6;">
+          <li>{{ … }}</li>
+        </ul>
+      </div>
+      <div style="background:var(--card);border-radius:10px;padding:16px 18px;border-top:3px solid var(--red-mid);">
+        <h3 style="font-size:13pt;color:var(--red-mid);margin-bottom:8px;">Как делать правильно</h3>
+        <ul style="font-size:10.5pt;color:var(--ink-soft);padding-left:18px;line-height:1.6;">
+          <li>{{ … }}</li>
+        </ul>
+      </div>
+    </div>
+    <div style="margin-top:18px;border-left:3px solid var(--gold);background:var(--card-warm);border-radius:8px;padding:14px 18px;">
+      <strong style="color:var(--burgundy);">Главное:</strong> {{ ключевой вывод }}
+    </div>
+  </div>
+  <div class="footer"><span>{{ РАЗДЕЛ }} <span class="sep">•</span> ВЫВОДЫ</span><span>04</span></div>
+</section>

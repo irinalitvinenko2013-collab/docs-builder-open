@@ -1,0 +1,30 @@
+# ── Ваше личное: на полку не уезжает ───────────────────────────────────
+
+# Ключи и настройки машины
+.claude/settings.local.json
+*.key
+
+# Что вы принесли и что собрали
+input/
+ingest/*
+!ingest/.gitkeep
+output/*
+!output/.gitkeep
+qa-*/
+guide-*.html
+guide.html
+самопроверка.html
+
+# Окружение и мусор
+.venv/
+assets/fonts/
+assets/vendor/
+assets/generated/
+assets/shots-*/
+assets/сетка/
+__pycache__/
+*.pyc
+.DS_Store
+
+# служебное
+профили/_активный

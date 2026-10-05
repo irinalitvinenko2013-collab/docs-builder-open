@@ -1,0 +1,59 @@
+<!-- ОБ АВТОРЕ · РОВНО ОДНА страница (ТЁМНАЯ), соцсети на ней же.
+     ДАННЫЕ ТОЛЬКО ИЗ context/автор.md, ДОСЛОВНО (не выдумывать!).
+     CSS: .astat.sm (метрики 4+3), .ach-grid/.ach2 (достижения 2×N) — в skeleton. -->
+<section class="page dark">
+  <div class="grid-tex"></div>
+  <div class="glow red"  style="width:260px;height:260px;top:-70px;right:-50px;opacity:.4;"></div>
+  <div class="glow gold" style="width:200px;height:200px;bottom:30px;left:-60px;opacity:.3;"></div>
+  <div class="pad">
+    <div class="kicker">ОБ АВТОРЕ</div>
+
+    <div style="display:flex;gap:20px;align-items:center;margin:8px 0 14px;">
+      <div class="photo-ring" style="width:116px;height:116px;flex:none;">
+        <div class="photo-glow"></div>
+        <div class="photo-inner"><img src="assets/профиль/фото-круг.jpg" alt="{{ имя из профиля }}"></div>
+      </div>
+      <div>
+        <h2 style="font-size:20pt;color:var(--warm-white);">{{ Имя }} <em>{{ Фамилия }}</em></h2>
+        <p style="font-size:10.5pt;color:var(--gold-soft);margin-top:4px;line-height:1.4;">{{ роль — из профиля }}</p>
+        <p style="font-size:8.5pt;color:rgba(var(--warm-white-rgb),.78);margin-top:6px;line-height:1.45;">{{ био одним абзацем — из профиля }}</p>
+      </div>
+    </div>
+
+    <div class="kicker" style="font-size:8pt;margin-bottom:8px;">{{ «Цифры проекта» — или свой заголовок; нет цифр в профиле → блок убрать }}</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-bottom:9px;">
+      <div class="astat sm"><div class="n">{{ число }}</div><small>{{ подпись }}</small></div>
+      <div class="astat sm"><div class="n">{{ число }}</div><small>{{ подпись }}</small></div>
+      <div class="astat sm"><div class="n">{{ число }}</div><small>{{ подпись }}</small></div>
+      <div class="astat sm"><div class="n">{{ число }}</div><small>{{ подпись }}</small></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:9px;">
+      <div class="astat sm"><div class="n">{{ число }}</div><small>{{ подпись }}</small></div>
+      <div class="astat sm"><div class="n">{{ число }}</div><small>{{ подпись }}</small></div>
+      <div class="astat sm"><div class="n">{{ число }}</div><small>{{ подпись }}</small></div>
+    </div>
+
+    <div class="kicker" style="font-size:8pt;margin:14px 0 8px;">Ключевые достижения</div>
+    <div class="ach-grid">
+      <div class="ach2"><span class="t">{{ тег }}</span><b>{{ достижение }}</b><small>{{ описание }}</small></div>
+      <div class="ach2"><span class="t">{{ тег }}</span><b>{{ достижение }}</b><small>{{ описание }}</small></div>
+      <div class="ach2"><span class="t">{{ тег }}</span><b>{{ достижение }}</b><small>{{ описание }}</small></div>
+      <div class="ach2"><span class="t">{{ тег }}</span><b>{{ достижение }}</b><small>{{ описание }}</small></div>
+      <div class="ach2"><span class="t">{{ тег }}</span><b>{{ достижение }}</b><small>{{ описание }}</small></div>
+      <div class="ach2"><span class="t">{{ тег }}</span><b>{{ достижение }}</b><small>{{ описание }}</small></div>
+      <div class="ach2"><span class="t">{{ тег }}</span><b>{{ достижение }}</b><small>{{ описание }}</small></div>
+    </div>
+
+    <!-- Соцсети — на этой же странице (контакты НЕ выносить на отдельную страницу) -->
+    <div class="contacts-wrap" style="margin-top:auto;">
+      <div class="contacts-h" style="color:var(--gold-soft);font-size:10pt;">{{ «Найдите меня здесь» или своя подпись }}</div>
+      <div class="contacts">
+        <!-- По одной строке на каждый контакт из профиля (поле «контакты»).
+             Значок в .ic-s — первая буква названия. href — всегда полный https://,
+             в <small> можно показать короткий вид. Пустой профиль → блок не ставим. -->
+        <a href="{{ url }}" target="_blank" rel="noopener noreferrer"><span class="ic-s">{{ Б }}</span><span class="tx"><b>{{ название }}</b><small>{{ адрес }}</small></span><span class="arr">↗</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>{{ РАЗДЕЛ }} <span class="sep">•</span> ОБ АВТОРЕ</span><span>{{ N }}</span></div>
+</section>

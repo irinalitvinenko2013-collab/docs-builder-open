@@ -1,0 +1,43 @@
+/* Тема документа. ФАЙЛ СОБИРАЕТСЯ АВТОМАТИЧЕСКИ — правьте профиль, а не его. */
+/* Профиль: bez-barierov — Фонд «Без Барьеров» */
+
+@font-face{font-family:'Montserrat';src:url('../assets/fonts/Montserrat.ttf');font-weight:100 900;}
+@font-face{font-family:'Open Sans';src:url('../assets/fonts/OpenSans.ttf');font-weight:300 800;}
+
+:root{
+  --font-heading:'Montserrat',sans-serif;
+  --font-body:'Open Sans',sans-serif;
+  --navy:#0C1140;                 /* тёмный фон */
+  --graphite:#161B54;             /* тёмный фон, второй тон */
+  --warm-white:#FCFCFB;           /* светлый фон */
+  --cream:#DDF0EE;                /* светлый фон, второй тон */
+  --burgundy:#EB5803;             /* главный акцент */
+  --red-mid:#EB5803;              /* акцент средний */
+  --red:#EB5803;                  /* акцент яркий */
+  --accent-2:#EB5803;             /* второй акцент — полоски, иконки, детали */
+  --gold:#6CBBBB;                 /* цитаты, значки, рамки */
+  --gold-soft:#DDF0EE;            /* тот же тон мягче */
+  --ink:#0C1140;                  /* текст на светлом */
+  --ink-soft:#3A3F66;             /* вторичный текст */
+  --line:#6CBBBB;                 /* разделители */
+
+  --card:#FEFEFE;                 /* фон карточки на светлой странице — считается сам */
+  --card-warm:#F9FCFC;            /* тёплая подложка врезки — считается сам */
+  --on-accent:#FFFFFF;            /* текст поверх акцента — считается сам */
+  --on-warm:#0C1140;              /* текст поверх тёплого — считается сам */
+  --gold-deep:#54909C;            /* тёплый глубже — для градиента — считается сам */
+
+  --navy-rgb:12,17,64;
+  --graphite-rgb:22,27,84;
+  --warm-white-rgb:252,252,251;
+  --cream-rgb:221,240,238;
+  --burgundy-rgb:235,88,3;
+  --red-mid-rgb:235,88,3;
+  --red-rgb:235,88,3;
+  --accent-2-rgb:235,88,3;
+  --gold-rgb:108,187,187;
+  --gold-soft-rgb:221,240,238;
+  --ink-rgb:12,17,64;
+  --ink-soft-rgb:58,63,102;
+  --line-rgb:108,187,187;
+}

@@ -1,0 +1,53 @@
+<!-- Обложка · ТЁМНАЯ.
+     ОБЯЗАТЕЛЬНО: кикер, название, имя автора из профиля.
+     ПО НАЛИЧИЮ (нет в профиле — блок целиком удалить, заглушку не рисовать):
+       · логотип     assets/профиль/логотип-на-светлом.*
+       · фото автора assets/профиль/фото-круг.jpg
+       · AI-фон      assets/generated/cover-<slug>.jpg — только если есть ключ и картинка
+                     реально сгенерирована; без неё обложка живёт на градиенте и пятнах.
+     ⛔ МЕТРИК АВТОРА НА ОБЛОЖКЕ НЕТ — они живут только на странице «Об авторе»
+       (правило скилла document-design). Нижний ряд — под факты о самом документе. -->
+<section class="page dark">
+  <div class="grid-tex"></div>
+  <div class="glow red"  style="width:300px;height:300px;top:-80px;right:-60px;"></div>
+  <div class="glow gold" style="width:240px;height:240px;bottom:60px;left:-80px;"></div>
+
+  <!-- AI-фон — ТОЛЬКО если картинка реально сгенерирована. Нет ключа/файла — удалить этот блок. -->
+  <div style="position:absolute;inset:0;z-index:0;overflow:hidden;">
+    <img src="assets/generated/cover-{{ slug }}.jpg" alt=""
+         style="width:100%;height:100%;object-fit:cover;object-position:center;opacity:0.18;mix-blend-mode:luminosity;">
+  </div>
+
+  <div class="pad" style="justify-content:space-between;">
+    <!-- Логотип на светлом чипе — ТОЛЬКО если он есть в профиле. Нет — удалить чип целиком. -->
+    <div style="display:inline-flex;align-items:center;justify-content:center;width:76px;height:76px;background:linear-gradient(135deg,var(--warm-white),var(--cream));border:1px solid rgba(var(--gold-rgb),.5);border-radius:16px;box-shadow:0 8px 20px -10px rgba(0,0,0,.55);">
+      <img src="assets/профиль/логотип-на-светлом.png" alt="{{ логотип из профиля }}" style="width:60px;height:60px;object-fit:contain;">
+    </div>
+
+    <div style="flex:1;display:flex;align-items:center;gap:30px;">
+      <div style="flex:1;">
+        <div class="kicker" style="margin-bottom:16px;">{{ КИКЕР-ГОД }}</div>
+        <h1 style="font-size:36pt;line-height:1.05;margin-bottom:14px;">{{ ЗАГОЛОВОК с <em>акцентным словом</em> }}</h1>
+        <p style="font-size:12.5pt;color:var(--gold-soft);line-height:1.55;">{{ подзаголовок }}</p>
+      </div>
+      <!-- Фото автора, интегрировано как «ведущий» гайда -->
+      <div style="flex:none;text-align:center;">
+        <div class="photo-ring" style="width:170px;height:170px;">
+          <div class="photo-glow"></div>
+          <div class="photo-inner"><img src="assets/профиль/фото-круг.jpg" alt="{{ имя из профиля }}"></div>
+        </div>
+        <div style="font-family:var(--font-heading);font-weight:700;font-size:10.5pt;color:var(--warm-white);margin-top:12px;">{{ имя из профиля }}</div>
+        <div style="font-size:8pt;color:var(--gold-soft);margin-top:2px;letter-spacing:.08em;text-transform:uppercase;">автор гайда</div>
+      </div>
+    </div>
+
+    <!-- Ряд фактов О ДОКУМЕНТЕ (не об авторе): страниц · для кого · когда собран.
+         Нечего сказать — удалить весь блок, пустых плашек не оставлять. -->
+    <div style="display:flex;gap:34px;margin-top:24px;padding-top:20px;border-top:1px solid rgba(var(--gold-rgb),.3);">
+      <div><div class="num" style="font-size:24pt;color:var(--gold);">{{ N }}</div><small style="color:var(--gold-soft);font-size:8.5pt;">{{ страниц }}</small></div>
+      <div><div class="num" style="font-size:24pt;color:var(--gold);">{{ N }}</div><small style="color:var(--gold-soft);font-size:8.5pt;">{{ шагов / разделов }}</small></div>
+      <div><div class="num" style="font-size:24pt;color:var(--gold);">{{ дата }}</div><small style="color:var(--gold-soft);font-size:8.5pt;">{{ когда собран }}</small></div>
+    </div>
+  </div>
+  <div class="footer"><span>{{ РАЗДЕЛ }} <span class="sep">•</span> ОБЛОЖКА</span><span>01</span></div>
+</section>

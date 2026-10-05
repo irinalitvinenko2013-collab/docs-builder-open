@@ -1,0 +1,21 @@
+<!-- Каталог ссылок · ТЁМНАЯ · группы по разделам, строка = значок + название + адрес (кликабельная) -->
+<section class="page dark">
+  <div class="grid-tex"></div>
+  <div class="glow gold" style="width:220px;height:220px;top:-40px;right:-50px;"></div>
+  <div class="pad">
+    <div class="kicker">КАТАЛОГ</div>
+    <h2 style="font-size:24pt;margin:6px 0 18px;color:var(--warm-white);">{{ Заголовок с <em>акцентом</em> }}</h2>
+
+    <div class="kicker" style="font-size:8pt;margin-bottom:8px;">{{ ГРУППА / РАЗДЕЛ }}</div>
+    <!-- повтор строки: вся строка — анкор; в href полный https:// -->
+    <a class="lnk" href="https://ПОЛНЫЙ_АДРЕС" target="_blank" rel="noopener noreferrer"
+       style="display:flex;align-items:center;gap:12px;padding:9px 12px;margin-bottom:7px;
+              background:rgba(255,255,255,.04);border:1px solid rgba(var(--gold-rgb),.25);border-radius:8px;">
+      <span style="width:26px;height:26px;border-radius:6px;display:flex;align-items:center;justify-content:center;
+                   background:linear-gradient(135deg,var(--gold-soft),var(--gold-deep));color:var(--on-warm);font-weight:800;">{{ ● }}</span>
+      <span style="flex:1;font-weight:600;">{{ название }}</span>
+      <span style="color:var(--gold-soft);font-size:9pt;">{{ короткий-адрес }}</span>
+    </a>
+  </div>
+  <div class="footer"><span>{{ РАЗДЕЛ }} <span class="sep">•</span> КАТАЛОГ</span><span>05</span></div>
+</section>
